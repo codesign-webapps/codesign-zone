@@ -1,26 +1,48 @@
 import React from 'react';
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import Shape from './components/Shape';
 import './App.css';
 
-function App() {
-  return (
-    <Parallax pages={3}>
-      
-      <ParallaxLayer offset={1} speed={1} factor={1} className="bg-yellow-light" />
-      <ParallaxLayer offset={2} speed={1} factor={1} className="bg-yellow-dark" />
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* Navbar */}
 
-      <ParallaxLayer offset={0} speed={0.8} style={{ opacity: 0.2 }}>
-        <img src="./images/rect-dark-gray-200x400.png" alt="" style={{ display: 'block', width: '10%', marginLeft: '55%' }} />
-        <img src="./images/square-gray-200.png" alt="" style={{ display: 'block', width: '15%', marginLeft: '15%' }} />
-        <img src="./images/rect-light-gray-200x800.png" alt="" style={{ display: "block", width: "10%", marginLeft: "40%" }} />
-      </ParallaxLayer>
+         {/* Site Content */}
+        <Parallax ref={ref => (this.parallax = ref)} pages={3}>
+          
+          <ParallaxLayer offset={1} speed={1} factor={1} className="bg-dark" />
+          <ParallaxLayer offset={2} speed={1} factor={1} className="bg-dark" />
 
-      <ParallaxLayer offset={0} speed={-0.1}>
-        <img src="./images/logo.png" alt="" style={{ display: "block", width: "60%", margin: "2rem auto" }} />
-      </ParallaxLayer>
+          {/* Scrolling Shapes */}
+          <Shape offset={0.5} speed={-0.2} type="smiley-outlined" width="15%" left="10%" opacity="0.2" />
+          <Shape offset={0.2} speed={-0.1} type="thumbs-filled" width="10%" left="80%" opacity="0.3" />
 
-    </Parallax>
-  );
+          <ParallaxLayer offset={0} speed={-0.13}>
+            {/* Logo */}
+            <img src="./images/logo.png" alt="" style={{ display: "block", width: "50%", margin: "2rem auto" }} />
+
+            {/* Start Project Button */}
+
+            {/* View Portfolio Button */}
+
+            {/* Scroll Icon */}
+
+          </ParallaxLayer>
+
+          {/* About Section */}
+
+          {/* Process Section */}
+
+          {/* The Team Section */}
+
+          {/* Footer Section */}
+
+        </Parallax>
+      </div>
+    );
+  }
 }
 
 export default App;
