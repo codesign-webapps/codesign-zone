@@ -16,16 +16,23 @@ class App extends React.Component {
           <ParallaxLayer offset={2} speed={1} factor={1} className="bg-dark" />
 
           {/* Scrolling Shapes */}
-          <Shape offset={0.5} speed={-0.2} type="smiley-outlined" width="15%" left="10%" opacity="0.2" />
-          <Shape offset={0.2} speed={-0.1} type="thumbs-filled" width="10%" left="80%" opacity="0.3" />
+          <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />
+          <Shape offset={0.7} speed={-0.05} type="thumbs-filled" width="12%" left="85%" opacity="0.3" />
 
+          <Shape offset={0.55} speed={-0.25} type="smiley-outlined" width="10%" left="75%" opacity="0.2" />
+          <Shape offset={0.45} speed={-0.2} type="smiley-filled" width="15%" left="7%" opacity="0.2" />
+
+          <Shape offset={0.8} speed={-0.06} type="heart-outlined" width="7%" left="20%" opacity="0.3" />
+          <Shape offset={0.12} speed={-0.3} type="heart-filled" width="15%" left="80%" opacity="0.3" />
+
+          {/* Landing Page Section */}
           <ParallaxLayer offset={0} speed={-0.13}>
             {/* Logo */}
-            <img src="./images/logo.png" alt="" style={{ display: "block", width: "50%", margin: "2rem auto" }} />
+            <img src="./images/logo.png" alt="" style={{ display: "block", width: "47%", margin: "1.5rem auto" }} />
 
-            {/* Start Project Button */}
+            {/* Get Quote Button */}
 
-            {/* View Portfolio Button */}
+            {/* Portfolio Button */}
 
             {/* Scroll Icon */}
 
