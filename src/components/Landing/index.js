@@ -15,15 +15,26 @@ function Landing() {
                 }}
             />
 
+            {/* Button Container */}
             <Container maxWidth="sm" >
 
               {/* Get Quote Button */}
-              <Button variant="outlined" size="large" style={{ float: "left" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                style={{ float: "left" }}
+                href="mailto:contact@codesign.zone"
+              >
                 <Typography variant="h4">Get Quote</Typography>
               </Button>
 
               {/* Portfolio Button */}
-              <Button variant="outlined" size="large" style={{ float: "right" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                style={{ float: "right" }}
+                href="#"
+              >
                 <Typography variant="h4">Portfolio</Typography>
               </Button>
 
