@@ -24,7 +24,7 @@ function Landing() {
 
               {/* Portfolio Button */}
               <Button variant="outlined" size="large" style={{ float: "right" }}>
-              <Typography variant="h4">Portfolio</Typography>
+                <Typography variant="h4">Portfolio</Typography>
               </Button>
 
             </Container>
