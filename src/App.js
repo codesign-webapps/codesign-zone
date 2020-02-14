@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
-import { Container, Button, Typography } from '@material-ui/core';
+import { Container, Button, Typography, Grid } from '@material-ui/core';
 import Shape from './components/Shape';
 import './App.css';
 
@@ -34,18 +34,18 @@ class App extends React.Component {
 
             <Container maxWidth="sm" >
               {/* Get Quote Button */}
-              <Button variant="outlined" size="large" style={{ float: "left" }}>
-                <Typography variant="h4">Get Quote</Typography>
+              <Button variant="outlined" size="large" style={{ float: "left", borderRadius: '35px', border: '#000000 solid 3px' }}>
+                <Typography to="#" variant="h4" style={{fontWeight: 'bold'}}>Get Quote</Typography>
               </Button>
 
               {/* Portfolio Button */}
-              <Button variant="outlined" size="large" style={{ float: "right" }}>
-              <Typography variant="h4">Portfolio</Typography>
+              <Button variant="outlined" size="large" style={{ float: "right", borderRadius: '35px', border: '#000000 solid 3px' }}>
+              <Typography to="#" variant="h4" style={{fontWeight: 'bold'}}>Portfolio</Typography>
               </Button>
             </Container>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0.9} speed={0.5}>
+          <ParallaxLayer offset={0.9} speed={0.0}>
             {/* Scroll Icon */}
             <Container maxWidth="xs" style={{ margin: "0 auto"}}>
               <span class="scroll-icon" style={{margin: "0 auto"}}>
@@ -55,28 +55,66 @@ class App extends React.Component {
           </ParallaxLayer>
 
           {/* About Section */}
-          <ParallaxLayer offset={1.1} speed={1} className="center" className="text-yellow">
+          <ParallaxLayer
+            offset={1.1}
+            speed={1}
+            className="center"
+            className="text-yellow">
             {/* Section Title */}
-            <Typography variant="h2" component="h2">Who are we anyway?</Typography>
+            <Typography
+              variant="h1"
+              component="h1"
+              style={{fontWeight: 'bold', textAlign: 'center'}}>
+                WHO ARE WE, ANYWAY?
+            </Typography>
 
             {/* About Text */}
-            <Typography variant="h4" component="h2">Codesign Web Applications</Typography>
-            <Typography variant="body1" component="p">
+      <div className="About">
+        <Grid container spacing={3}>
+          <Grid item xs={6} style={{marginTop: '10%'}}>
+            <Typography
+              variant="h3"
+              component="h2"
+              style={{fontWeight: 'bold', textAlign: 'center'}}>
+                Codesign Web Applications
+            </Typography>
+            <Typography
+              variant="body1"
+              component="p"
+              style={{ textAlign: 'justify', margin: '0% 5%', fontSize: '1.15rem'}}>
               is an experienced and passionate group of designers, developers, project managers, writers, and artists.
               Built on customer service first and foremost, every customer becomes a part of the Codesign family. Together we face the challenges and celebrate the victories!
             </Typography>
-
+            </Grid>
+            <Grid Item xs={6}>
+              <img
+                src="../images/smiley-face-yellow.png"
+                alt="smiley face"
+                style={{width:'25%', position: 'absolute', paddingLeft: '12%', paddingTop: '2%'}}>
+              </img>
+            </Grid>
+          </Grid>
+        </div>
             {/* What We Do Text */}
-            <Typography variant="h4" component="h2">What We Do</Typography>
-            <ul>
-              <li>Web Design</li>
-              <li>Web Hosting</li>
-              <li>App Development</li>
-              <li>Web Copy Writing</li>
-              <li>Photography</li>
-              <li>Videography</li>
-            </ul>
-
+      <div className="AboutContinued">
+        <Grid container spacing={3}>
+        <Grid item xs={6} style={{marginTop: '10%'}}>
+            <img
+              src="../images/thumbs-yellow.png"
+              alt="thumbs up"
+              style={{width:'25%', paddingLeft: '10%', paddingTop:'-25%'}}>
+            </img>
+          </Grid>
+          <Grid item xs={6} style={{marginTop: '8%'}}>
+            <Typography
+              variant="h3"
+              component="h2"
+              style= {{fontWeight: 'bold', textAlign: 'center'}}>
+                What We Do
+            </Typography>
+            </Grid>
+        </Grid>
+      </div>
             {/* Shapes */}
 
           </ParallaxLayer>
