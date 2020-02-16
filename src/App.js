@@ -18,11 +18,7 @@ class App extends React.Component {
         <Navbar />
 
          {/* Site Content */}
-        <Parallax ref={ref => (this.parallax = ref)} pages={3}>
-          
-          {/* Dark Backgrounds */}
-          <ParallaxLayer offset={1} speed={1} factor={1} className="bg-dark" />
-          <ParallaxLayer offset={2} speed={1} factor={1} className="bg-dark" />
+        <Parallax ref={ref => (this.parallax = ref)} pages={3.15}>
 
           {/* Scrolling Shapes */}
           <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />
@@ -44,24 +40,27 @@ class App extends React.Component {
             <Scroller />
           </ParallaxLayer>
 
-          {/* About Section */}
-          <ParallaxLayer offset={1.1} speed={1} className="center text-yellow">
-            <About />
-          </ParallaxLayer>
+          
+          <ParallaxLayer offset={1} speed={1} factor={3} className="center">
+            {/* About Section */}
+            <div className="bg-dark text-yellow full-height">
+              <About />
+            </div>
 
-          {/* Process Section */}
-          <ParallaxLayer offset={2.1} speed={1} className="center">
-            <Process />
-          </ParallaxLayer>
+            {/* Process Section */}
+            <div className="bg-yellow full-height">
+              <Process />
+            </div>
+            
+            {/* Team Section */}
+            <div className="bg-dark text-yellow full-height">
+              <Team />
+            </div>
 
-          {/* Team Section */}
-          <ParallaxLayer offset={3.1} speed={1} className="center text-yellow">
-            <Team />
-          </ParallaxLayer>
-
-          {/* Footer Section */}
-          <ParallaxLayer offset={4.1} speed={1} className="center">
-            <Footer />
+            {/* Footer Section */}
+            <div className="bg-yellow">
+              <Footer />
+            </div>
           </ParallaxLayer>
 
         </Parallax>
