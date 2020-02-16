@@ -5,7 +5,7 @@ function Process() {
     return (
         <div>
             {/* Section Title */}
-            <Typography variant="h2" component="h2">Our Poject Process</Typography>
+            <Typography className="title" variant="h1" component="h1" style={{fontWeight: "bold", zIndex: '1'}}>OUR PROJECT PROCESS</Typography>
 
             {/* Phase 1 */}
             <Container></Container>

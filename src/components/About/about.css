@@ -1,0 +1,11 @@
+.title {
+    font-weight: bold;
+}
+
+#smiley {
+    width: 35%;
+}
+
+ul {
+    column-count: 2;
+}
