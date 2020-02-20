@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Button } from '@material-ui/core';
-import { SendIcon, PhoneIcon, CopyrightIcon } from '@material-ui/icons';
+import PhoneIcon from '@material-ui/icons/Phone';
+import SendIcon from '@material-ui/icons/Send';
+import CopyrightIcon from '@material-ui/icons/Copyright';
 
 function Footer() {
     return (

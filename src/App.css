@@ -1,3 +1,7 @@
+body, html {
+  font-family: 'Roboto';
+}
+
 .bg-yellow {
   background: #FFEA00;
 }
@@ -14,11 +18,20 @@
   margin: 0 auto;
 }
 
+.full-height {
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
 @keyframes scroll_2 {
   0%   { transform: translateY(0); opacity: 1; }
   25%  { opacity: 1; }
-  75%  { transform: translateY(.75em); opacity: 0; }
-  100% { transform: translateY(0); opacity: 0; }
+  /* 75%  { transform: translateY(.75em); opacity: 0.5; } */
+  100% { transform: translateY(1em); opacity: 0; }
 }
 
 .scroll-icon__dot {

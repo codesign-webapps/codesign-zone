@@ -22,20 +22,20 @@ function Landing() {
               <Button
                 variant="outlined"
                 size="large"
-                style={{ float: "left" }}
+                style={{ float: "left", borderRadius: "35px", border: "4px black solid" }}
                 href="mailto:contact@codesign.zone"
               >
-                <Typography variant="h4">Get Quote</Typography>
+                <Typography variant="h4" style={{fontWeight: "bold"}}>Get Quote</Typography>
               </Button>
 
               {/* Portfolio Button */}
               <Button
                 variant="outlined"
                 size="large"
-                style={{ float: "right" }}
+                style={{ float: "right", borderRadius: "35px", border: "4px black solid" }}
                 href="#"
               >
-                <Typography variant="h4">Portfolio</Typography>
+                <Typography variant="h4" style={{fontWeight: "bold"}}>Portfolio</Typography>
               </Button>
 
             </Container>
