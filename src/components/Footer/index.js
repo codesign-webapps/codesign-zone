@@ -1,34 +1,44 @@
 import React from 'react';
-import { Typography, Button } from '@material-ui/core';
+import { Typography, Button, Container } from '@material-ui/core';
 import PhoneIcon from '@material-ui/icons/Phone';
 import SendIcon from '@material-ui/icons/Send';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 
 function Footer() {
     return (
-        <div>
+        <div style={{ textAlign: "center" }}>
             {/* Section Title */}
-            <Typography variant="h2" component="h2">Drop Us A Line</Typography>
-
-            {/* Email Button */}
-            <Button
-                variant="outlined"
-                size="large"
-                startIcon={<SendIcon />}
-                href="mailto:contact@codesign.zone"
+            <Typography className="title"
+                variant="h1"
+                component="h1"
+                style={{ fontWeight: "bold" }}
             >
-                <Typography variant="h4">Email</Typography>
-            </Button>
+                DROP US A LINE
+            </Typography>
 
-            {/* Phone Button */}
-            <Button
-                variant="outlined"
-                size="large"
-                startIcon={<PhoneIcon />}
-                href="tel:2818891359"
-            >
-                <Typography variant="h4">Phone</Typography>
-            </Button>
+            <Container maxWidth="sm" style={{ margin: "2rem auto"}}>
+                {/* Email Button */}
+                <Button
+                    variant="outlined"
+                    size="large"
+                    startIcon={<SendIcon />}
+                    href="mailto:contact@codesign.zone"
+                    style={{ marginRight: "2rem" }}
+                >
+                    <Typography variant="h4">Email</Typography>
+                </Button>
+
+                {/* Phone Button */}
+                <Button
+                    variant="outlined"
+                    size="large"
+                    startIcon={<PhoneIcon />}
+                    href="tel:2818891359"
+                    style={{ marginLeft: "2rem" }}
+                >
+                    <Typography variant="h4">Phone</Typography>
+                </Button>
+            </Container>
 
             {/* Copyright Info */}
             <Typography variant="caption" component="block">
