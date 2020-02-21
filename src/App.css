@@ -16,6 +16,7 @@ body, html {
 
 .center {
   margin: 0 auto;
+  text-align: center;
 }
 
 .full-height {
@@ -25,6 +26,10 @@ body, html {
 
 .title {
   text-align: center;
+  font-weight: bold;
+}
+
+.bold {
   font-weight: bold;
 }
 
