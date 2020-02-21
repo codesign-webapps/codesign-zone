@@ -2,7 +2,6 @@ import React from 'react';
 import { Typography, Button, Container } from '@material-ui/core';
 import PhoneIcon from '@material-ui/icons/Phone';
 import SendIcon from '@material-ui/icons/Send';
-import CopyrightIcon from '@material-ui/icons/Copyright';
 
 function Footer() {
     return (
@@ -42,7 +41,7 @@ function Footer() {
 
             {/* Copyright Info */}
             <Typography variant="caption" component="block">
-                Copyright <CopyrightIcon /> 2020 codesign web applications
+                Copyright © {new Date().getFullYear()} | All Rights Reserved | codesign web applications
             </Typography>
         </div>
     );

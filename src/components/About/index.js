@@ -40,7 +40,7 @@ function About() {
             {/* About Text */}
             <Grid item container xs={12} style={{justifyContent: 'center'}}>
               <Grid item xs={6} alignItems="center">
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={0}>
                   <Typography variant="h3" component="h2"
                     style={{fontWeight: 'bold'}}>
                     Codesign Web Applications
@@ -56,7 +56,7 @@ function About() {
               </Paper>
               </Grid>
               <Grid item xs={5}>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={0}>
                   <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" />
                 </Paper>
               </Grid>
@@ -65,12 +65,12 @@ function About() {
             {/* What We Do Text */}
             <Grid item container xs={12} style={{justifyContent: 'center'}}>
               <Grid item xs={5}>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={0}>
                   <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" />
                 </Paper>
               </Grid>
               <Grid item xs={6} alignItems="center">
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={0}>
                   <Typography variant="h3" component="h2"
                     style={{fontWeight: 'bold'}}>
                     What We Do?
