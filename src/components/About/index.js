@@ -43,14 +43,14 @@ function About() {
                 <Paper className={classes.paper} elevation={0}>
                   <Typography variant="h3" component="h2"
                     style={{fontWeight: 'bold'}}>
-                    Codesign Web Applications
+                    codesign Web Applications
                   </Typography>
                 <Typography variant="body1" component="p"
                   style={{fontSize: '1.25rem'}}>
                   is an experienced and passionate group of designers, developers,
                   project managers, writers, and artists. Built on customer
                   service first and foremost, every customer becomes a part of the
-                  Codesign family. Together we face the challenges and celebrate
+                  codesign family. Together we face the challenges and celebrate
                   the victories!
                 </Typography>
               </Paper>

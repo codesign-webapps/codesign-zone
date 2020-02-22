@@ -18,7 +18,7 @@ class App extends React.Component {
         <Navbar />
 
          {/* Site Content */}
-        <Parallax ref={ref => (this.parallax = ref)} pages={2.91}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={2.92}>
 
           {/* Scrolling Shapes */}
           <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />
