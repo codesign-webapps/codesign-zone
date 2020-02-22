@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Button } from '@material-ui/core';
+import { Typography, Grid, Button, Box } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   btn: {
@@ -12,10 +12,11 @@ const useStyles = makeStyles(theme => ({
   },
   grid: {
     flexGrow: 1,
-    // paddingLeft: "2rem",
-    // paddingRight: "2rem"
   },
-  border: {
+  box: {
+    margin: "1rem",
+    width: "100hw",
+    height: "9rem",
     border: "2px #181818 solid"
   }
 }));
@@ -38,21 +39,51 @@ function Process() {
         >
 
           {/* Phase 1 */}
-          <Grid item xs={3} className={classes.border}>
+          <Grid item xs={3}>
             {/* TODO */}
-            TODO
+            <Box className={classes.box}>
+            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 1</Typography>
+            <Typography variant="h4">Strategy & Conceptualization</Typography>
+            </Box>
           </Grid>
-
+          <Grid item xs={1}></Grid>
           {/* Phase 2 */}
-          <Grid item xs={3} className={classes.border}>
+          <Grid item xs={3}>
             {/* TODO */}
-            TODO
+            <Box className={classes.box}>
+            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 2</Typography>
+            <Typography variant="h4" style={{padding: "1.5rem 0"}}>Digital Design</Typography>
+            </Box>
+          </Grid>
+<Grid item xs={1}></Grid>
+          {/* Phase 3 */}
+          <Grid item xs={3}>
+            {/* TODO */}
+            <Box className={classes.box}>
+            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 3</Typography>
+            <Typography variant="h4">Development & Quality Assessment</Typography>
+            </Box>
           </Grid>
 
-          {/* Phase 3 */}
-          <Grid item xs={3} className={classes.border}>
-            {/* TODO */}
-            TODO
+          <Grid item xs={4}>
+            <Typography variant="p">Project Kickoff</Typography><br />
+            <Typography variant="p">Research & Strategy</Typography><br />
+            <Typography variant="p">Sitemap & Content Mapping</Typography><br />
+            <Typography variant="p">Wireframes & Sketches</Typography><br />
+          </Grid>
+
+          <Grid item xs={4}>
+            <Typography variant="p">High-Fidelity Mockups</Typography><br />
+            <Typography variant="p">Illustrations</Typography><br />
+            <Typography variant="p">Photography</Typography><br />
+            <Typography variant="p">Typography</Typography><br />
+          </Grid>
+
+          <Grid item xs={4}>
+            <Typography variant="p">Front End Development</Typography><br />
+            <Typography variant="p">Back End Development</Typography><br />
+            <Typography variant="p">3rd Party Integrations</Typography><br />
+            <Typography variant="p">Quality Assurance & Testing</Typography><br />  
           </Grid>
 
           <Grid item xs={12} className="center">
