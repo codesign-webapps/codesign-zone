@@ -26,14 +26,14 @@ function About() {
   return (
     <div>
       {/* Section Title */}
-      <Typography
+      <a name="about"><Typography
         className="title"
         variant="h1"
         component="h1"
         style={{ fontWeight: "bold" }}
       >
         WHO ARE WE ANYWAY?
-      </Typography>
+      </Typography></a>
 
       <div className={classes.root}>
         <Grid container spacing={3}>

@@ -27,7 +27,7 @@ function Process() {
     <div>
         {/* Section Title */}
         <div className="center">
-          <Typography variant="h1" component="h1" className={classes.bold}>OUR PROJECT PROCESS</Typography>
+          <a name="process"><Typography variant="h1" component="h1" className={classes.bold}>OUR PROJECT PROCESS</Typography></a>
         </div>
 
         <Grid container

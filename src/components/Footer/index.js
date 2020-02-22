@@ -20,12 +20,12 @@ function Footer() {
     return (
         <div className="center">
             {/* Section Title */}
-            <Typography className={classes.bold}
+            <a name="contact"><Typography className={classes.bold}
                 variant="h1"
                 component="h1"
             >
                 DROP US A LINE
-            </Typography>
+            </Typography></a>
 
             <Container maxWidth="sm" style={{ margin: "2rem auto"}}>
                 {/* Email Button */}

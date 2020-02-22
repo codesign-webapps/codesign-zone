@@ -5,14 +5,14 @@ function Team() {
     return (
         <div>
             {/* Section Title */}
-            <Typography
+            <a name="team"><Typography
                 className="title"
                 variant="h1"
                 component="h1"
                 style={{ fontWeight: "bold" }}
             >
                 MEET THE DUDES
-            </Typography>
+            </Typography></a>
 
             {/* Section Sub-Title */}
 

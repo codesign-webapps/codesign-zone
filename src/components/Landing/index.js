@@ -23,11 +23,11 @@ function Landing() {
   return (
     <div>
         {/* Logo */}
-        <img
+        <a name="top"><img
             src="./images/codesignlogo.png"
             alt="" 
             className={classes.logo}
-        />
+        /></a>
 
         {/* Button Container */}
         <Container maxWidth="sm" >
