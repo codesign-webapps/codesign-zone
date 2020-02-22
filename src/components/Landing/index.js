@@ -24,7 +24,7 @@ function Landing() {
     <div>
         {/* Logo */}
         <img
-            src="./images/logo.png"
+            src="./images/codesignlogo.png"
             alt="" 
             className={classes.logo}
         />
