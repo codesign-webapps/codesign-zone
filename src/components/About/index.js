@@ -10,6 +10,9 @@ import "./about.css";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    [theme.breakpoints.down('sm')]: {
+      flexGrow: "1",
+    }
   },
   paper: {
     padding: theme.spacing(1),
@@ -17,7 +20,35 @@ const useStyles = makeStyles(theme => ({
     color: "#FFEA00",
     background: "#181818",
     margin: "0 auto",
-  }
+  },
+  header: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "33px",
+    }
+  },
+  image: {
+    [theme.breakpoints.down('sm')]: {
+      display: "none",
+    }
+  },
+  title: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "25px",
+      margin: "0 auto"
+    }
+  },
+  paragraph: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "20px",
+      margin: "0 auto"
+    }
+  },
+  list: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "10px",
+      margin: "0 auto"
+    }
+  },
 }));
 
 function About() {
@@ -27,7 +58,7 @@ function About() {
     <div>
       {/* Section Title */}
       <a name="about"><Typography
-        className="title"
+        className={classes.header}
         variant="h1"
         component="h1"
         style={{ fontWeight: "bold" }}
@@ -38,14 +69,14 @@ function About() {
       <div className={classes.root}>
         <Grid container spacing={3}>
             {/* About Text */}
-            <Grid item container xs={12} style={{justifyContent: 'center'}}>
-              <Grid item xs={6} alignItems="center">
+            <Grid item container xs={12} sm={6} style={{justifyContent: 'center'}}>
+              <Grid item xs={12} sm={6} alignItems="center">
                 <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h3" component="h2"
+                  <Typography variant="h3" component="h2" className={classes.title}
                     style={{fontWeight: 'bold'}}>
-                    codesign Web Applications
+                    Codesign Web Applications
                   </Typography>
-                <Typography variant="body1" component="p"
+                <Typography variant="body1" component="p" className={classes.paragraph}
                   style={{fontSize: '1.25rem'}}>
                   is an experienced and passionate group of designers, developers,
                   project managers, writers, and artists. Built on customer
@@ -57,31 +88,31 @@ function About() {
               </Grid>
               <Grid item xs={5}>
                 <Paper className={classes.paper} elevation={0}>
-                  <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" />
+                  <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
                 </Paper>
               </Grid>
             </Grid>
 
             {/* What We Do Text */}
-            <Grid item container xs={12} style={{justifyContent: 'center'}}>
+            <Grid item container xs={12} sm={6}  style={{justifyContent: 'center'}}>
               <Grid item xs={5}>
                 <Paper className={classes.paper} elevation={0}>
-                  <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" />
+                  <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
                 </Paper>
               </Grid>
-              <Grid item xs={6} alignItems="center">
+              <Grid item xs={12} sm={6} alignItems="center">
                 <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h3" component="h2"
+                  <Typography className={classes.header} variant="h3" component="h2"
                     style={{fontWeight: 'bold'}}>
                     What We Do?
                   </Typography>
                   <List>
-                    <InfoList text="Web Design" />
-                    <InfoList text="Web Hosting" />
-                    <InfoList text="App Development" />
-                    <InfoList text="Web Copywriting" />
-                    <InfoList text="SEO" />
-                    <InfoList text="Photography" />
+                    <InfoList className={classes.list} text="Web Design" />
+                    <InfoList className={classes.list} text="Web Hosting" />
+                    <InfoList className={classes.list} text="App Development" />
+                    <InfoList className={classes.list} text="Web Copywriting" />
+                    <InfoList className={classes.list} text="SEO" />
+                    <InfoList className={classes.list} text="Photography" />
                   </List>
                 </Paper>
               </Grid>

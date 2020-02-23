@@ -3,14 +3,27 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography, Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    
+  },
   logo: {
     display: "block",
     width: "55%",
-    margin: "1.5rem auto"
+    margin: "1.5rem auto",
+    [theme.breakpoints.down('sm')]: {
+      width: "100%",
+      margin: "1.5rem auto",
+    }
   },
   btn: {
     borderRadius: "35px",
-    border: "4px black solid"
+    border: "4px black solid",
+    [theme.breakpoints.down('sm')]: {
+      display: "flex",
+      flexGrow: "1",
+      margin: "5px",
+      float: "none !important",
+    }
   },
   bold: {
     fontWeight: "bold"

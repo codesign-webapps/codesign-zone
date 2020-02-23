@@ -9,8 +9,17 @@ import Process from './components/Process';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import './App.css';
+// import { makeStyles } from '@material-ui/core/styles';
+
+// const useStyles = makeStyles(theme => ({
+//   scroller: {
+    
+//   },
+// }));
 
 class App extends React.Component {
+  // const classes = useStyles();
+
   render() {
     return (
       <div>
