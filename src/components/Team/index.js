@@ -5,7 +5,7 @@ function Team() {
     return (
         <div>
             {/* Section Title */}
-            <a name="team"><Typography
+            <a name="team" href="team"><Typography
                 className="title"
                 variant="h1"
                 component="h1"

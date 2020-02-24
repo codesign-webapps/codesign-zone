@@ -36,7 +36,7 @@ function Landing() {
   return (
     <div>
         {/* Logo */}
-        <a name="top"><img
+        <a name="top" href="#top"><img
             src="./images/codesignlogo.png"
             alt="" 
             className={classes.logo}

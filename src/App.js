@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   const [posY, setPosY] = useState(0);
-  const onScroll = useCallback(e => {setPosY(e.target.scrollTop); console.log(posY);});
+  const onScroll = useCallback(e => setPosY(e.target.scrollTop), []);
 
   return (
     <div onScroll={onScroll}>
@@ -20,7 +20,7 @@ function App() {
       <Navbar posY={posY} />
 
       {/* Site Content */}
-      <Parallax pages={2.92} >
+      <Parallax pages={3.07}>
 
           {/* Scrolling Shapes */}
           <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />

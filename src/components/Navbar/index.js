@@ -13,8 +13,8 @@ const useStyles = makeStyles(theme => ({
         height: "50px"
     },
     btn: {
-        color: "#181818",
-        fontWeight: "bold"
+        color: "#181818 !important",
+        fontWeight: "bold !important"
     },
     show: {
         transform: 'translate(0, 0)',

@@ -57,7 +57,7 @@ function About() {
   return (
     <div>
       {/* Section Title */}
-      <a name="about"><Typography
+      <a name="about" href="#about"><Typography
         className={classes.header}
         variant="h1"
         component="h1"
@@ -70,7 +70,7 @@ function About() {
         <Grid container spacing={3} style={{justifyContent: 'center'}}>
 
             {/* About Text */}
-            <Grid item xs={12} sm={7} alignItems="center">
+            <Grid item xs={12} sm={7}>
               <Paper className={classes.paper} elevation={0}>
                 <Typography variant="h3" component="h2" className={classes.title}
                   style={{fontWeight: 'bold'}}>
@@ -102,7 +102,7 @@ function About() {
             </Grid>
 
             {/* What We Do Text */}
-            <Grid item xs={12} sm={7} alignItems="center">
+            <Grid item xs={12} sm={7}>
               <Paper className={classes.paper} elevation={0}>
                 <Typography className={classes.header} variant="h3" component="h2"
                   style={{fontWeight: 'bold'}}>

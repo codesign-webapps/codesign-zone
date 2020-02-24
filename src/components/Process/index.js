@@ -18,6 +18,13 @@ const useStyles = makeStyles(theme => ({
     width: "100hw",
     height: "9rem",
     border: "2px #181818 solid"
+  },
+  lightBox: {
+    margin: "0 1rem",
+    paddingTop: "2rem",
+    width: "100hw",
+    height: "9rem",
+    border: "2px #CCBB00 solid"
   }
 }));
 
@@ -28,7 +35,7 @@ function Process() {
     <div>
         {/* Section Title */}
         <div className="center">
-          <a name="process"><Typography variant="h1" component="h1" className={classes.bold}>OUR PROJECT PROCESS</Typography></a>
+          <a name="process" href="#process"><Typography variant="h1" component="h1" className={classes.bold}>OUR PROJECT PROCESS</Typography></a>
         </div>
 
         <Grid container
@@ -39,51 +46,58 @@ function Process() {
         >
 
           {/* Phase 1 */}
-          <Grid item xs={3}>
-            {/* TODO */}
+          <Grid item xs={12} sm={9} md={4} className="center">
             <Box className={classes.box}>
-            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 1</Typography>
-            <Typography variant="h4">Strategy & Conceptualization</Typography>
+              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 1</Typography>
+              <Typography variant="h4">Strategy & Conceptualization</Typography>
+            </Box>
+
+            {/* <br /> */}
+
+            <Box className={classes.lightBox}>
+              <Typography component="p">Project Kickoff</Typography>
+              <Typography component="p">Research & Strategy</Typography>
+              <Typography component="p">Sitemap & Content Mapping</Typography>
+              <Typography component="p">Wireframes & Sketches</Typography>
             </Box>
           </Grid>
-          <Grid item xs={1}></Grid>
+
+          {/* <Grid item xs={0} sm={0} md={1}></Grid> */}
+
           {/* Phase 2 */}
-          <Grid item xs={3}>
-            {/* TODO */}
+          <Grid item xs={12} sm={9} md={4} className="center">
             <Box className={classes.box}>
-            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 2</Typography>
-            <Typography variant="h4" style={{padding: "1.5rem 0"}}>Digital Design</Typography>
+              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 2</Typography>
+              <Typography variant="h4" style={{padding: "1.5rem 0"}}>Digital Design</Typography>
+            </Box>
+            
+            {/* <br /> */}
+
+            <Box className={classes.lightBox}>
+              <Typography component="p">High-Fidelity Mockups</Typography>
+              <Typography component="p">Illustrations</Typography>
+              <Typography component="p">Photography</Typography>
+              <Typography component="p">Typography</Typography>
             </Box>
           </Grid>
-<Grid item xs={1}></Grid>
+
+          {/* <Grid item xs={0} sm={0} md={1}></Grid> */}
+
           {/* Phase 3 */}
-          <Grid item xs={3}>
-            {/* TODO */}
+          <Grid item xs={12} sm={9} md={4} className="center">
             <Box className={classes.box}>
-            <Typography variant="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 3</Typography>
-            <Typography variant="h4">Development & Quality Assessment</Typography>
+              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 3</Typography>
+              <Typography variant="h4">Development & Quality Assessment</Typography>
             </Box>
-          </Grid>
 
-          <Grid item xs={4}>
-            <Typography variant="p">Project Kickoff</Typography><br />
-            <Typography variant="p">Research & Strategy</Typography><br />
-            <Typography variant="p">Sitemap & Content Mapping</Typography><br />
-            <Typography variant="p">Wireframes & Sketches</Typography><br />
-          </Grid>
+            {/* <br /> */}
 
-          <Grid item xs={4}>
-            <Typography variant="p">High-Fidelity Mockups</Typography><br />
-            <Typography variant="p">Illustrations</Typography><br />
-            <Typography variant="p">Photography</Typography><br />
-            <Typography variant="p">Typography</Typography><br />
-          </Grid>
-
-          <Grid item xs={4}>
-            <Typography variant="p">Front End Development</Typography><br />
-            <Typography variant="p">Back End Development</Typography><br />
-            <Typography variant="p">3rd Party Integrations</Typography><br />
-            <Typography variant="p">Quality Assurance & Testing</Typography><br />  
+            <Box className={classes.lightBox}>
+              <Typography component="p">Front End Development</Typography>
+              <Typography component="p">Back End Development</Typography>
+              <Typography component="p">3rd Party Integrations</Typography>
+              <Typography component="p">Quality Assurance & Testing</Typography>
+            </Box>
           </Grid>
 
           <Grid item xs={12} className="center">

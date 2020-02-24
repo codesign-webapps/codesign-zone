@@ -20,7 +20,7 @@ function Footer() {
     return (
         <div className="center">
             {/* Section Title */}
-            <a name="contact"><Typography className={classes.bold}
+            <a name="contact" href="#contact"><Typography className={classes.bold}
                 variant="h1"
                 component="h1"
             >
