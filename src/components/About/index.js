@@ -67,17 +67,17 @@ function About() {
       </Typography></a>
 
       <div className={classes.root}>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} style={{justifyContent: 'center'}}>
+
             {/* About Text */}
-            <Grid item container xs={12} sm={6} style={{justifyContent: 'center'}}>
-              <Grid item xs={12} sm={6} alignItems="center">
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography variant="h3" component="h2" className={classes.title}
-                    style={{fontWeight: 'bold'}}>
-                    Codesign Web Applications
-                  </Typography>
-                <Typography variant="body1" component="p" className={classes.paragraph}
-                  style={{fontSize: '1.25rem'}}>
+            <Grid item xs={12} sm={7} alignItems="center">
+              <Paper className={classes.paper} elevation={0}>
+                <Typography variant="h3" component="h2" className={classes.title}
+                  style={{fontWeight: 'bold'}}>
+                  Codesign Web Applications
+                </Typography>
+              <Typography variant="body1" component="p" className={classes.paragraph}
+                style={{fontSize: '1.25rem'}}>
                   is an experienced and passionate group of designers, developers,
                   project managers, writers, and artists. Built on customer
                   service first and foremost, every customer becomes a part of the
@@ -85,37 +85,38 @@ function About() {
                   the victories!
                 </Typography>
               </Paper>
-              </Grid>
-              <Grid item xs={5}>
-                <Paper className={classes.paper} elevation={0}>
-                  <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
-                </Paper>
-              </Grid>
+            </Grid>
+
+            {/* Smiley Face */}
+            <Grid item xs={5}>
+              <Paper className={classes.paper} elevation={0}>
+                <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
+              </Paper>
+            </Grid>
+            
+            {/* Thumbs Up */}
+            <Grid item xs={5}>
+              <Paper className={classes.paper} elevation={0}>
+                <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
+              </Paper>
             </Grid>
 
             {/* What We Do Text */}
-            <Grid item container xs={12} sm={6}  style={{justifyContent: 'center'}}>
-              <Grid item xs={5}>
-                <Paper className={classes.paper} elevation={0}>
-                  <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
-                </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6} alignItems="center">
-                <Paper className={classes.paper} elevation={0}>
-                  <Typography className={classes.header} variant="h3" component="h2"
-                    style={{fontWeight: 'bold'}}>
+            <Grid item xs={12} sm={7} alignItems="center">
+              <Paper className={classes.paper} elevation={0}>
+                <Typography className={classes.header} variant="h3" component="h2"
+                  style={{fontWeight: 'bold'}}>
                     What We Do?
-                  </Typography>
-                  <List>
-                    <InfoList className={classes.list} text="Web Design" />
-                    <InfoList className={classes.list} text="Web Hosting" />
-                    <InfoList className={classes.list} text="App Development" />
-                    <InfoList className={classes.list} text="Web Copywriting" />
-                    <InfoList className={classes.list} text="SEO" />
-                    <InfoList className={classes.list} text="Photography" />
-                  </List>
-                </Paper>
-              </Grid>
+                </Typography>
+                <List>
+                  <InfoList className={classes.list} text="Web Design" />
+                  <InfoList className={classes.list} text="Web Hosting" />
+                  <InfoList className={classes.list} text="App Development" />
+                  <InfoList className={classes.list} text="Web Copywriting" />
+                  <InfoList className={classes.list} text="SEO" />
+                  <InfoList className={classes.list} text="Photography" />
+                </List>
+              </Paper>
             </Grid>
         </Grid>
       </div>
