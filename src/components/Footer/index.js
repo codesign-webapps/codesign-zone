@@ -54,7 +54,7 @@ function Footer() {
             </Container>
 
             {/* Copyright Info */}
-            <Typography variant="caption" component="block">
+            <Typography variant="caption">
                 Copyright © {new Date().getFullYear()} | All Rights Reserved | codesign web applications
             </Typography>
         </div>

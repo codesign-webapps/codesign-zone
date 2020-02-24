@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import Navbar from './components/Navbar';
 import Shape from './components/Shape';
@@ -9,25 +9,18 @@ import Process from './components/Process';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import './App.css';
-// import { makeStyles } from '@material-ui/core/styles';
 
-// const useStyles = makeStyles(theme => ({
-//   scroller: {
-    
-//   },
-// }));
+function App() {
+  const [posY, setPosY] = useState(0);
+  const onScroll = useCallback(e => {setPosY(e.target.scrollTop); console.log(posY);});
 
-class App extends React.Component {
-  // const classes = useStyles();
+  return (
+    <div onScroll={onScroll}>
+      {/* Navbar */}
+      <Navbar posY={posY} />
 
-  render() {
-    return (
-      <div>
-        {/* Navbar */}
-        <Navbar />
-
-         {/* Site Content */}
-        <Parallax ref={ref => (this.parallax = ref)} pages={2.92}>
+      {/* Site Content */}
+      <Parallax pages={2.92} >
 
           {/* Scrolling Shapes */}
           <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />
@@ -71,11 +64,9 @@ class App extends React.Component {
               <Footer />
             </div>
           </ParallaxLayer>
-
-        </Parallax>
-      </div>
-    );
-  }
+      </Parallax>
+    </div>
+  );
 }
 
 export default App;

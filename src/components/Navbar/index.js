@@ -15,14 +15,22 @@ const useStyles = makeStyles(theme => ({
     btn: {
         color: "#181818",
         fontWeight: "bold"
+    },
+    show: {
+        transform: 'translate(0, 0)',
+        transition: 'transform .5s',
+    },
+    hide: {
+        transform: 'translate(0, -70px)',
+        transition: 'transform .5s',
     }
 }));
 
-function Navbar() {
+function Navbar(props) {
     const classes = useStyles();
 
     return (
-        <AppBar position="sticky" className={classes.appbar}>
+        <AppBar position="fixed" className={`${classes.appbar} ${props.posY > 850 ? classes.show: classes.hide}`}>
             <Toolbar>
                 <IconButton edge="start" aria-label="nav" href="#top">
                     <img src="./images/codesignlogo.png" alt="codesign" className={classes.icon} />
