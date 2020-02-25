@@ -10,9 +10,13 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 import './App.css';
 
+const min = 550, max = 2000;
+const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
+
 function App() {
   const [posY, setPosY] = useState(0);
   const onScroll = useCallback(e => setPosY(e.target.scrollTop), []);
+  const pages = map(window.innerHeight, min, max, 5.1, 2.17);
 
   return (
     <div onScroll={onScroll}>
@@ -20,7 +24,7 @@ function App() {
       <Navbar posY={posY} />
 
       {/* Site Content */}
-      <Parallax pages={3.07}>
+      <Parallax pages={pages}>
 
           {/* Scrolling Shapes */}
           <Shape offset={0.1} speed={-0.6} type="thumbs-outlined" width="9%" left="5%" opacity="0.2" />
@@ -60,7 +64,7 @@ function App() {
             </div>
 
             {/* Footer Section */}
-            <div className="bg-yellow" style={{ paddingTop: "2rem" }}>
+            <div className="bg-yellow full-height">
               <Footer />
             </div>
           </ParallaxLayer>

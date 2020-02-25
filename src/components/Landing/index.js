@@ -49,7 +49,6 @@ function Landing() {
           <Button
             variant="outlined"
             size="large"
-            style={{ float: "left" }}
             className={classes.btn}
             href="mailto:contact@codesign.zone"
           >
@@ -60,7 +59,6 @@ function Landing() {
           <Button
             variant="outlined"
             size="large"
-            style={{ float: "right" }}
             className={classes.btn}
             href="#"
           >

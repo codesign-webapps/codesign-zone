@@ -25,8 +25,9 @@ a, a:link, a:visited, a:hover, a:active, a:focus {
 }
 
 .full-height {
-  height: 90vh;
+  /* height: 90vh; */
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .title {

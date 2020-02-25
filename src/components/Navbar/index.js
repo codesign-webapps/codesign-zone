@@ -30,7 +30,7 @@ function Navbar(props) {
     const classes = useStyles();
 
     return (
-        <AppBar position="fixed" className={`${classes.appbar} ${props.posY > 750 ? classes.show: classes.hide}`}>
+        <AppBar position="fixed" className={`${classes.appbar} ${props.posY > window.innerHeight / 2 ? classes.show: classes.hide}`}>
             <Toolbar>
                 <IconButton edge="start" aria-label="nav" href="#top">
                     <img src="./images/codesignlogo.png" alt="codesign" className={classes.icon} />
