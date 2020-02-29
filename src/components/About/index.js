@@ -6,9 +6,7 @@ import InfoList from '../InfoList';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    [theme.breakpoints.down('sm')]: {
-      flexGrow: "1",
-    }
+    paddingLeft: "1rem"
   },
   center: {
     textAlign: "center",
@@ -50,6 +48,11 @@ const useStyles = makeStyles(theme => ({
   },
   bold: {
     fontWeight: 'bold'
+  },
+  split: {
+    [theme.breakpoints.up('md')]: {
+      columns: 2
+    }
   }
 }));
 
@@ -98,7 +101,7 @@ function About() {
                 <Typography className={`${classes.header} ${classes.bold}`} variant="h3" component="h2">
                     What We Do?
                 </Typography>
-                <List>
+                <List className={classes.split}>
                   <InfoList className={classes.list} text="Web Design" />
                   <InfoList className={classes.list} text="Web Hosting" />
                   <InfoList className={classes.list} text="App Development" />

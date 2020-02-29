@@ -12,6 +12,12 @@ a, a:link, a:visited, a:hover, a:active, a:focus {
     text-decoration: none;
     color: inherit;
 }
+/* 
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+} */
 
 @keyframes scroll {
     0%   { transform: translateY(0); opacity: 1; }
