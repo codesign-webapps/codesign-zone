@@ -37,7 +37,7 @@ function App() {
   const classes = useStyles();
   const [posY, setPosY] = useState(0);
   const onScroll = useCallback(e => setPosY(e.target.scrollTop), []);
-  const pages = map(window.innerHeight, min, max, 5.1, 2.17);
+  const pages = map(window.innerHeight, min, max, 4.6, 2.17);
 
   return (
     <div onScroll={onScroll}>
@@ -75,7 +75,7 @@ function App() {
             </div>
 
             {/* Process Section */}
-            <div className={`${classes.textYellow} ${classes.section}`}>
+            <div className={`${classes.bgYellow} ${classes.section}`}>
               <Process />
             </div>
             
@@ -85,7 +85,7 @@ function App() {
             </div>
 
             {/* Footer Section */}
-            <div className={`${classes.textYellow} ${classes.section}`}>
+            <div className={`${classes.bgYellow} ${classes.section}`}>
               <Footer />
             </div>
           </ParallaxLayer>

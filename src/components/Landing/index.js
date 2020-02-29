@@ -3,9 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography, Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    
-  },
   logo: {
     display: "block",
     width: "55%",

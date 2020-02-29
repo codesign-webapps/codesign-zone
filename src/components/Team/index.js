@@ -1,18 +1,30 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid } from '@material-ui/core';
 
+const useStyles = makeStyles(theme => ({
+    title: {
+        [theme.breakpoints.down('sm')]: {
+          fontSize: "50px",
+          margin: "0 auto"
+        }
+    },
+    bold: {
+        fontWeight: "bold"
+    }
+}));
+
 function Team() {
+    const classes = useStyles();
+
     return (
         <div>
             {/* Section Title */}
-            <a name="team" href="team"><Typography
-                className="title"
-                variant="h1"
-                component="h1"
-                style={{ fontWeight: "bold" }}
-            >
-                MEET THE DUDES
-            </Typography></a>
+            <a name="team" href="team">
+                <Typography className={`${classes.title} ${classes.bold}`} variant="h1" component="h1">
+                    MEET THE DUDES
+                </Typography>
+            </a>
 
             {/* Section Sub-Title */}
             <Typography variant="h4">

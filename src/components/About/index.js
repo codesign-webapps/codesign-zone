@@ -10,12 +10,14 @@ const useStyles = makeStyles(theme => ({
       flexGrow: "1",
     }
   },
+  center: {
+    textAlign: "center",
+    margin: "0 auto"
+  },
   paper: {
     padding: theme.spacing(1),
-    textAlign: "center",
     color: "#FFEA00",
-    background: "#181818",
-    margin: "0 auto",
+    background: "#181818"
   },
   header: {
     [theme.breakpoints.down('sm')]: {
@@ -23,13 +25,14 @@ const useStyles = makeStyles(theme => ({
     }
   },
   image: {
+    width: "50%",
     [theme.breakpoints.down('sm')]: {
       display: "none",
     }
   },
   title: {
     [theme.breakpoints.down('sm')]: {
-      fontSize: "25px",
+      fontSize: "50px",
       margin: "0 auto"
     }
   },
@@ -45,6 +48,9 @@ const useStyles = makeStyles(theme => ({
       margin: "0 auto"
     }
   },
+  bold: {
+    fontWeight: 'bold'
+  }
 }));
 
 function About() {
@@ -53,23 +59,18 @@ function About() {
   return (
     <div>
       {/* Section Title */}
-      <a name="about" href="#about"><Typography
-        className={classes.header}
-        variant="h1"
-        component="h1"
-        style={{ fontWeight: "bold" }}
-      >
-        WHO ARE WE ANYWAY?
-      </Typography></a>
+      <a name="about" href="#about">
+        <Typography className={`${classes.title} ${classes.bold}`} variant="h1" component="h1">
+          WHO ARE WE ANYWAY?
+        </Typography>
+      </a>
 
       <div className={classes.root}>
         <Grid container spacing={3} style={{justifyContent: 'center'}}>
 
             {/* About Text */}
             <Grid item xs={12} sm={7}>
-              <Paper className={classes.paper} elevation={0}>
-                <Typography variant="h3" component="h2" className={classes.title}
-                  style={{fontWeight: 'bold'}}>
+                <Typography variant="h3" component="h2" className={`${classes.header} ${classes.bold}`}>
                   Codesign Web Applications
                 </Typography>
               <Typography variant="body1" component="p" className={classes.paragraph}
@@ -80,28 +81,21 @@ function About() {
                   codesign family. Together we face the challenges and celebrate
                   the victories!
                 </Typography>
-              </Paper>
             </Grid>
 
             {/* Smiley Face */}
             <Grid item xs={5}>
-              <Paper className={classes.paper} elevation={0}>
                 <img src="../images/smiley-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
-              </Paper>
             </Grid>
             
             {/* Thumbs Up */}
             <Grid item xs={5}>
-              <Paper className={classes.paper} elevation={0}>
-                <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
-              </Paper>
+               <img src="../images/thumbs-yellow.png" alt="smiley face" id="smiley" className={classes.image} />
             </Grid>
 
             {/* What We Do Text */}
             <Grid item xs={12} sm={7}>
-              <Paper className={classes.paper} elevation={0}>
-                <Typography className={classes.header} variant="h3" component="h2"
-                  style={{fontWeight: 'bold'}}>
+                <Typography className={`${classes.header} ${classes.bold}`} variant="h3" component="h2">
                     What We Do?
                 </Typography>
                 <List>
@@ -112,7 +106,6 @@ function About() {
                   <InfoList className={classes.list} text="SEO" />
                   <InfoList className={classes.list} text="Photography" />
                 </List>
-              </Paper>
             </Grid>
         </Grid>
       </div>

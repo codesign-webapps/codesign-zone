@@ -1,5 +1,11 @@
 body, html {
-    font-family: 'Roboto';
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #FFEA00;
 }
 
 a, a:link, a:visited, a:hover, a:active, a:focus {

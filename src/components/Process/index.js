@@ -3,6 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Button, Box } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
+  center: {
+    textAlign: "center",
+    margin: "0 auto"
+  },
+  title: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "50px",
+      margin: "0 auto"
+    }
+  },
   btn: {
     borderRadius: "35px",
     border: "4px black solid"
@@ -25,6 +35,10 @@ const useStyles = makeStyles(theme => ({
     width: "100hw",
     height: "9rem",
     border: "2px #CCBB00 solid"
+  },
+  phase: {
+    fontSize: "1.25rem",
+    textDecoration: "underline"
   }
 }));
 
@@ -34,8 +48,12 @@ function Process() {
   return (
     <div>
         {/* Section Title */}
-        <div className="center">
-          <a name="process" href="#process"><Typography variant="h1" component="h1" className={classes.bold}>OUR PROJECT PROCESS</Typography></a>
+        <div className={classes.center}>
+          <a name="process" href="#process">
+            <Typography variant="h1" component="h1" className={`${classes.title} ${classes.bold}`}>
+              OUR PROJECT PROCESS
+            </Typography>
+          </a>
         </div>
 
         <Grid container
@@ -46,9 +64,9 @@ function Process() {
         >
 
           {/* Phase 1 */}
-          <Grid item xs={12} sm={9} md={4} className="center">
+          <Grid item xs={12} sm={9} md={4} className={classes.center}>
             <Box className={classes.box}>
-              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 1</Typography>
+              <Typography component="p" className={classes.phase}>Phase 1</Typography>
               <Typography variant="h4">Strategy & Conceptualization</Typography>
             </Box>
 
@@ -65,9 +83,9 @@ function Process() {
           {/* <Grid item xs={0} sm={0} md={1}></Grid> */}
 
           {/* Phase 2 */}
-          <Grid item xs={12} sm={9} md={4} className="center">
+          <Grid item xs={12} sm={9} md={4} className={classes.center}>
             <Box className={classes.box}>
-              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 2</Typography>
+              <Typography component="p" className={classes.phase}>Phase 2</Typography>
               <Typography variant="h4" style={{padding: "1.5rem 0"}}>Digital Design</Typography>
             </Box>
             
@@ -84,9 +102,9 @@ function Process() {
           {/* <Grid item xs={0} sm={0} md={1}></Grid> */}
 
           {/* Phase 3 */}
-          <Grid item xs={12} sm={9} md={4} className="center">
+          <Grid item xs={12} sm={9} md={4} className={classes.center}>
             <Box className={classes.box}>
-              <Typography component="p" style={{fontSize: "1.25rem", textDecoration: "underline"}}>Phase 3</Typography>
+              <Typography component="p" className={classes.phase}>Phase 3</Typography>
               <Typography variant="h4">Development & Quality Assessment</Typography>
             </Box>
 
@@ -100,7 +118,7 @@ function Process() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} className="center">
+          <Grid item xs={12} className={classes.center}>
             <Typography variant="h4" className={classes.bold}>READY TO DO THIS?</Typography>
           </Grid>
 
