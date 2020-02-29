@@ -1,11 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography,
-         Grid,
-         Paper,
-         List} from "@material-ui/core";
+import { Typography, Grid, Paper, List } from "@material-ui/core";
 import InfoList from '../InfoList';
-import "./about.css";
 
 const useStyles = makeStyles(theme => ({
   root: {

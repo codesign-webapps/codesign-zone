@@ -1,9 +1,5 @@
 import React from "react";
-import { 
-         ListItem,
-         ListItemText,
-         ListItemIcon,
-         Typography } from "@material-ui/core";
+import { ListItem, ListItemText, ListItemIcon, Typography } from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 
 function InfoList(props) {

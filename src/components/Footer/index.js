@@ -11,6 +11,10 @@ const useStyles = makeStyles(theme => ({
     },
     bold: {
       fontWeight: "bold"
+    },
+    center: {
+        margin: "0 auto",
+        textAlign: "center"
     }
 }));
 
@@ -18,7 +22,7 @@ function Footer() {
     const classes = useStyles();
     
     return (
-        <div className="center">
+        <div className={classes.center}>
             {/* Section Title */}
             <a name="contact" href="#contact"><Typography className={classes.bold}
                 variant="h1"

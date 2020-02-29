@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import Navbar from './components/Navbar';
 import Shape from './components/Shape';
@@ -8,12 +9,32 @@ import About from './components/About';
 import Process from './components/Process';
 import Team from './components/Team';
 import Footer from './components/Footer';
-import './App.css';
+
+const useStyles = makeStyles(theme => ({
+  bgYellow: {
+    background: "#FFEA00"
+  },
+  bgDark: {
+    background: "#181818"
+  },
+  textYellow: {
+    color: "#FFEA00"
+  },
+  center: {
+    margin: "0 auto",
+    textAlign: "center"
+  },
+  section: {
+    paddingTop: "2rem",
+    paddingBottom: "2rem"
+  }
+}));
 
 const min = 550, max = 2000;
 const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
 
 function App() {
+  const classes = useStyles();
   const [posY, setPosY] = useState(0);
   const onScroll = useCallback(e => setPosY(e.target.scrollTop), []);
   const pages = map(window.innerHeight, min, max, 5.1, 2.17);
@@ -47,24 +68,24 @@ function App() {
           </ParallaxLayer>
 
           
-          <ParallaxLayer offset={1} speed={1} factor={3} className="center">
+          <ParallaxLayer offset={1} speed={1} factor={3} className={classes.center}>
             {/* About Section */}
-            <div className="bg-dark text-yellow full-height">
+            <div className={`${classes.bgDark} ${classes.textYellow} ${classes.section}`}>
               <About />
             </div>
 
             {/* Process Section */}
-            <div className="bg-yellow full-height">
+            <div className={`${classes.textYellow} ${classes.section}`}>
               <Process />
             </div>
             
             {/* Team Section */}
-            <div className="bg-dark text-yellow full-height">
+            <div className={`${classes.bgDark} ${classes.textYellow} ${classes.section}`}>
               <Team />
             </div>
 
             {/* Footer Section */}
-            <div className="bg-yellow full-height">
+            <div className={`${classes.textYellow} ${classes.section}`}>
               <Footer />
             </div>
           </ParallaxLayer>

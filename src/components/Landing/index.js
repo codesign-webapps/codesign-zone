@@ -10,9 +10,11 @@ const useStyles = makeStyles(theme => ({
     display: "block",
     width: "55%",
     margin: "1.5rem auto",
+    [theme.breakpoints.down('xs')]: {
+      width: "100%"
+    },
     [theme.breakpoints.down('sm')]: {
-      width: "100%",
-      margin: "1.5rem auto",
+      width: "75%"
     }
   },
   btn: {
@@ -51,6 +53,7 @@ function Landing() {
             size="large"
             className={classes.btn}
             href="mailto:contact@codesign.zone"
+            style={{ float: "left" }}
           >
             <Typography variant="h4" className={classes.bold}>Get Quote</Typography>
           </Button>
@@ -61,6 +64,7 @@ function Landing() {
             size="large"
             className={classes.btn}
             href="#"
+            style={{ float: "right" }}
           >
             <Typography variant="h4" className={classes.bold}>Portfolio</Typography>
           </Button>

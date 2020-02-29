@@ -1,0 +1,14 @@
+body, html {
+    font-family: 'Roboto';
+}
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes scroll {
+    0%   { transform: translateY(0); opacity: 1; }
+    25%  { opacity: 1; }
+    100% { transform: translateY(1em); opacity: 0; }
+}
